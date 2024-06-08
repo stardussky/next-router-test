@@ -12,7 +12,7 @@ import { PageLinks } from "@/components/PageLinks";
 export const getServerSideProps = async ({ res, query }) => {
   res.setHeader("Cache-Control", "public, s-maxage=10, stale-while-revalidate=59");
 
-  await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/hello`);
+  await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/hello`);
 
   const date = dayjs().format("YYYY-MM-DD HH:mm:ss");
 

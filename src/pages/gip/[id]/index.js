@@ -64,7 +64,7 @@ export default function GipPage({ props }) {
 }
 
 GipPage.getInitialProps = async ({ res, query }) => {
-  await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/hello`);
+  await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/hello`);
 
   if (typeof window === "undefined") {
     const date = dayjs().format("YYYY-MM-DD HH:mm:ss");

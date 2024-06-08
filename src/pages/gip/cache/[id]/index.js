@@ -64,7 +64,7 @@ export default function GipCachePage({ props }) {
 }
 
 GipCachePage.getInitialProps = async ({ res, query }) => {
-  await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/hello`);
+  await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/hello`);
 
   if (typeof window === "undefined") {
     res.setHeader("Cache-Control", "public, s-maxage=10, stale-while-revalidate=59");

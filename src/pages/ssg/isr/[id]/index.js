@@ -17,7 +17,7 @@ import {
 import { PageLinks } from "@/components/PageLinks";
 
 export const getStaticProps = async ({ res, params }) => {
-  // await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/hello`);
+  // await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/hello`);
 
   const date = dayjs().format("YYYY-MM-DD HH:mm:ss");
 
